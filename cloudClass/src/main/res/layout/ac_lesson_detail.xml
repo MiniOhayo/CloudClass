@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.cloudclass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_divider"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/btn_down_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:drawableTop="@drawable/btn_down_load_s"
+            android:text="下载"
+            android:textColor="@color/tutor_detail_info"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_down_load"
+            android:drawableTop="@drawable/btn_favorite_s"
+            android:text="收藏"
+            android:textColor="@color/tutor_detail_info"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/btn_favorite"
+            android:drawableTop="@drawable/btn_comments_s"
+            android:text="评论"
+            android:textColor="@color/tutor_detail_info"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_divider"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="取消"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:text="完成"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_finish"
+                android:layout_marginTop="5dp"
+                android:hint="说点什么吧!" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/rl_bottom" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/fl_play"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp" >
+
+                <SurfaceView
+                    android:id="@+id/surface"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center" >
+                </SurfaceView>
+
+                <ImageView
+                    android:id="@+id/btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/to_play" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/progress_large" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#77333333"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/btn_shared"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/btn_shared"
+                        android:textColor="@color/tutor_detail_info"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:drawableLeft="@drawable/back_arrow"
+                        android:drawablePadding="5dp"
+                        android:text="返回"
+                        android:textColor="@color/tutor_detail_info"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_menu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#77333333"
+                    android:orientation="vertical"
+                    android:padding="2dp" >
+
+                    <ImageView
+                        android:id="@+id/play"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/play" />
+
+                    <ImageView
+                        android:id="@+id/full_screen"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/full_screen" />
+
+                    <SeekBar
+                        android:id="@+id/sbProgress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@id/full_screen"
+                        android:layout_toRightOf="@id/play"
+                        android:maxHeight="2dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:progressDrawable="@drawable/play_progress_bg"
+                        android:thumb="@drawable/remote_thumb"
+                        android:thumbOffset="2dip"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvProgress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sbProgress"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@id/full_screen"
+                        android:layout_toRightOf="@id/play"
+                        android:gravity="right"
+                        android:text="00:00:00/00:30:05"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <com.cloudclass.view.NumberCircleProgressBar
+                        android:id="@+id/numbercircleprogress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        custom:max="100"
+                        custom:progress="0"
+                        custom:progress_circle_radius="30dp"
+                        custom:progress_fill_mode="rotate"
+                        custom:progress_reached_color="#3498DB"
+                        custom:progress_text_color="@android:color/black"
+                        custom:progress_text_size="15sp"
+                        custom:progress_text_visibility="visible"
+                        custom:progress_unreached_center_color="@color/backgroud_color"
+                        custom:progress_unreached_color="#CCCCCC" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/numbercircleprogress_bar"
+                        android:padding="3dp" >
+
+                        <TextView
+                            android:id="@+id/show_lesson_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="红楼梦详解"
+                            android:textColor="@color/tutor_detail_title"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/show_lesson_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/show_lesson_name"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/tutor_detail_info"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/main_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_teacher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/img_face"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/tutor_img" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_face"
+                        android:padding="3dp" >
+
+                        <TextView
+                            android:id="@+id/show_tutor_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="王小帅"
+                            android:textColor="@color/tutor_detail_title"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/show_tutor_job"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/show_tutor_title"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="高级讲师"
+                            android:textColor="@color/tutor_detail_info"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/main_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_comments"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/comments" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="用户评论"
+                        android:textColor="@color/tutor_detail_title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/comments_num"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableRight="@drawable/next_arrow"
+                        android:gravity="center_vertical"
+                        android:text="(48)"
+                        android:textColor="@color/tutor_detail_title"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_divider"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="课程简介"
+                        android:textColor="@color/tutor_detail_title" />
+
+                    <TextView
+                        android:id="@+id/tvplayTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="播放次数"
+                        android:textColor="@color/tutor_detail_title" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_dedails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="最近在Github上看到了daimajia写的一个开源组件NumberProgressBar觉得非常好，故而在其基础上进行了一些延伸与扩展，编写了一个NumberCircleProgressBar(即圆形的进度条)，并且分为两种模式，我称之为rotate模式和rising_water模式。"
+                    android:textColor="@color/tutor_detail_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

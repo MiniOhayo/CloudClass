@@ -1,0 +1,87 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From CloudClass:
+* ic_launcher-web.png
+* proguard-project.txt
+From SMSSDK-t:
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In SMSSDK-t:
+* AndroidManifest.xml => sMSSDKt/src/main/AndroidManifest.xml
+* assets/ => sMSSDKt/src/main/assets
+* libs/MobTools.jar => sMSSDKt/libs/MobTools.jar
+* libs/SMSSDK-1.2.0.jar => sMSSDKt/libs/SMSSDK-1.2.0.jar
+* libs/arm64-v8a/libsmssdk.so => sMSSDKt/src/main/jniLibs/arm64-v8a/libsmssdk.so
+* libs/armeabi-v7a/libsmssdk.so => sMSSDKt/src/main/jniLibs/armeabi-v7a/libsmssdk.so
+* libs/armeabi/libsmssdk.so => sMSSDKt/src/main/jniLibs/armeabi/libsmssdk.so
+* libs/mframework.jar => sMSSDKt/libs/mframework.jar
+* libs/mips/libsmssdk.so => sMSSDKt/src/main/jniLibs/mips/libsmssdk.so
+* libs/mips64/libsmssdk.so => sMSSDKt/src/main/jniLibs/mips64/libsmssdk.so
+* libs/x86/libsmssdk.so => sMSSDKt/src/main/jniLibs/x86/libsmssdk.so
+* libs/x86_64/libsmssdk.so => sMSSDKt/src/main/jniLibs/x86_64/libsmssdk.so
+* res/ => sMSSDKt/src/main/res/
+* src/ => sMSSDKt/src/main/java/
+In CloudClass:
+* AndroidManifest.xml => cloudClass/src/main/AndroidManifest.xml
+* assets/ => cloudClass/src/main/assets/
+* libs/ShareSDK-Core-2.6.0.jar => cloudClass/libs/ShareSDK-Core-2.6.0.jar
+* libs/ShareSDK-QQ-2.6.0.jar => cloudClass/libs/ShareSDK-QQ-2.6.0.jar
+* libs/ShareSDK-QZone-2.6.0.jar => cloudClass/libs/ShareSDK-QZone-2.6.0.jar
+* libs/ShareSDK-SinaWeibo-2.6.0.jar => cloudClass/libs/ShareSDK-SinaWeibo-2.6.0.jar
+* libs/ShareSDK-TencentWeibo-2.6.0.jar => cloudClass/libs/ShareSDK-TencentWeibo-2.6.0.jar
+* libs/ShareSDK-Wechat-2.6.0.jar => cloudClass/libs/ShareSDK-Wechat-2.6.0.jar
+* libs/ShareSDK-Wechat-Core-2.6.0.jar => cloudClass/libs/ShareSDK-Wechat-Core-2.6.0.jar
+* libs/ShareSDK-Wechat-Moments-2.6.0.jar => cloudClass/libs/ShareSDK-Wechat-Moments-2.6.0.jar
+* libs/fastjson-1.1.43.android.jar => cloudClass/libs/fastjson-1.1.43.android.jar
+* libs/httpmime-4.1.jar => cloudClass/libs/httpmime-4.1.jar
+* res/ => cloudClass/src/main/res/
+* src/ => cloudClass/src/main/java/
+* sorlistview_show_head_toast_bg.9.PNG => sorlistview_show_head_toast_bg.9.png
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

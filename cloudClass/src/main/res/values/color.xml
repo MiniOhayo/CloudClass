@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="backgroud_color">#e9e9e9</color>
+    <color name="front_black">#333333</color>
+    <color name="front_white">#FFFFFF</color>
+    <color name="front_blue">#45c018</color>
+    <color name="front_input">#868686</color>
+    <color name="menu_front">#ffffff</color>
+    <color name="tab_tag_text_focus">#ff00e4ff</color>
+    <color name="gray">#ff7d7d7d</color>
+    <color name="video_gray">#20224559</color>
+    <color name="white">#ffffffff</color>
+    <color name="main_theme">#45c018</color>
+    <color name="main_title">#21292b</color>
+    <color name="main_divider">#d7d7d7</color>
+    <color name="main_tab_bg">#f2f2f2</color>
+    <color name="tutor_detail_title">#434343</color>
+    <color name="tutor_detail_info">#a1a1a1</color>
+    <color name="tutor_detail_lesson_page">#21b1aa</color>
+    <!--  -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="alert_white_bg">#5eb1b1b1</color>
+    <color name="select_item_bg_h">#c100c8</color>
+    <color name="select_item_bg">#babab4</color>
+    <color name="theme_style">#4fc1e9</color>
+    
+    <color name="progress_bg_c">#ccff99</color>
+
+</resources>

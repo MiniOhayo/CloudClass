@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="5dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/filter_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_cancel"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/sorlistview_search_bar_icon_normal"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="搜索你感兴趣的课程"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/front_input"
+            android:textSize="15.0dip" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:text="类型"
+                    android:textColor="@color/front_black"
+                    android:textSize="18sp" />
+
+                <GridView
+                    android:id="@+id/gvType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:columnWidth="80.0dip"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="5dp"
+                    android:text="来源"
+                    android:textColor="@color/front_black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_isDomestic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp" >
+
+                    <RadioButton
+                        android:id="@+id/rb_isAll"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_check_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="全部"
+                        android:textColor="@drawable/item_text_selector"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_isDomestic"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/item_check_selector"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="国内"
+                        android:textColor="@drawable/item_text_selector"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_isAbroad"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/item_check_selector"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="国外"
+                        android:textColor="@drawable/item_text_selector"
+                        android:textSize="15sp" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/rg_isNew_isHot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp" >
+
+                    <RadioButton
+                        android:id="@+id/isNew"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_check_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="按最新"
+                        android:textColor="@drawable/item_text_selector"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/isHot"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/item_check_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="按最热"
+                        android:textColor="@drawable/item_text_selector"
+                        android:textSize="15sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvLesson"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/main_divider"
+                android:dividerHeight="1px"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="@drawable/item_s" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

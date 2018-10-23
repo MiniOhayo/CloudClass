@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="5dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.example.provinceselector.ClearEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/btn_cancel"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/sorlistview_search_bar_icon_normal"
+            android:drawablePadding="10dp"
+            android:hint="搜索你感兴趣的课程"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/front_input"
+            android:textSize="15.0dip" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gvType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="80.0dip"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1.0dip" />
+
+    <ListView
+        android:id="@+id/lvLesson"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/main_divider"
+        android:dividerHeight="1px"
+        android:listSelector="@drawable/item_s"
+        android:visibility="gone" />
+
+</LinearLayout>

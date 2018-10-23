@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_divider"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/tab_1"
+            style="@style/tab_style2"
+            android:checked="true"
+            android:drawableTop="@drawable/main_home_s"
+            android:text="@string/main_important"
+            android:textColor="@drawable/main_bottom_text_color" />
+
+        <RadioButton
+            android:id="@+id/tab_2"
+            style="@style/tab_style2"
+            android:drawableTop="@drawable/main_all_lesson_s"
+            android:text="@string/main_all"
+            android:textColor="@drawable/main_bottom_text_color" />
+
+        <RadioButton
+            android:id="@+id/tab_3"
+            style="@style/tab_style2"
+            android:drawableTop="@drawable/main_mine_s"
+            android:text="@string/main_my"
+            android:textColor="@drawable/main_bottom_text_color" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tab_menu"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

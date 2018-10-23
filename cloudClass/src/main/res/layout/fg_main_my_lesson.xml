@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/main_my"
+            android:textColor="@color/front_white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_comments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_item"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/img_face"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/comments" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/next_arrow"
+                android:gravity="center_vertical"
+                android:text="我就是我"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_item"
+            android:orientation="horizontal"
+            android:padding="1px" >
+
+            <TextView
+                android:id="@+id/btn_down"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/mine_menu_bg_s"
+                android:drawableTop="@drawable/mine_down"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="下载" />
+
+            <TextView
+                android:id="@+id/btn_history"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/mine_menu_bg_s"
+                android:drawableTop="@drawable/mine_history"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="播放历史" />
+
+            <TextView
+                android:id="@+id/btn_my_lesson"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/mine_menu_bg_s"
+                android:drawableTop="@drawable/mine_lesson"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="我的课程"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/btn_favorite"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/mine_menu_bg_s"
+                android:drawableTop="@drawable/mine_favorite"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="我的收藏" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_item"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/next_arrow"
+                android:gravity="center_vertical"
+                android:text="我的余额"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_item"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/next_arrow"
+                android:gravity="center_vertical"
+                android:text="我的订单"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_feed_back"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_item"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/next_arrow"
+                android:gravity="center_vertical"
+                android:text="意见反馈"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_unlogin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/wait"
+            android:gravity="center"
+            android:drawablePadding="20dp"
+            android:text="登陆后可查看自己的课程"
+            android:textColor="@color/front_input" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn"
+            android:padding="8dp"
+            android:text="立即登录"
+            android:textColor="@drawable/btn_text_s"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

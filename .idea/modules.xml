@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CloudClass.iml" filepath="$PROJECT_DIR$/CloudClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudClass/cloudClass.iml" filepath="$PROJECT_DIR$/cloudClass/cloudClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sMSSDKt/sMSSDKt.iml" filepath="$PROJECT_DIR$/sMSSDKt/sMSSDKt.iml" />
+    </modules>
+  </component>
+</project>

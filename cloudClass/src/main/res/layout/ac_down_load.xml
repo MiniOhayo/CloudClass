@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/front_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/title_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="编辑"
+            android:textColor="@color/front_white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn"
+            android:src="@drawable/img_back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_top"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down_load" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="你还没有下载的课程哦，赶去发现新的课程吧"
+            android:textColor="@color/front_input"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/cache_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="已经下载 "
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/stdory_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="可用空间"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvLive"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp"
+            android:listSelector="@drawable/item_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_normal"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text=" 删除"
+            android:textColor="@color/front_input"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

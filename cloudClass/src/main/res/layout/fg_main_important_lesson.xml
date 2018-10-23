@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <!-- 顶部 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:paddingLeft="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/main_important"
+            android:textColor="@color/front_white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn"
+            android:src="@drawable/btn_search"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_search"
+            android:background="@drawable/title_btn"
+            android:src="@drawable/btn_history" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:gravity="center" >
+
+        <RadioGroup
+            android:id="@+id/rgImportant"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <RadioButton
+                android:id="@+id/rb_important_suggestion"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_top_selecter0"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="热门推荐"
+                android:textColor="@drawable/main_top_text_color"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_important_free"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_top_selecter1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="免费"
+                android:textColor="@drawable/main_top_text_color"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_important_new"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_top_selecter1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="最新课程"
+                android:textColor="@drawable/main_top_text_color"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_important_tutor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_top_selecter2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="导师排行"
+                android:textColor="@drawable/main_top_text_color"
+                android:textSize="15sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rgImportant_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</LinearLayout>

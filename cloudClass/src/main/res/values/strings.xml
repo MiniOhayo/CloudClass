@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">恋爱公开课</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 主页 -->
+    <string name="main_important">首页</string>
+    <string name="main_all">全部课程</string>
+    <string name="main_my">我</string>
+    <string name="tv_favorite">猜你喜欢</string>
+    <string name="tv_recommend">小编推荐</string>
+    <string name="tv_week">本周主题</string>
+    <string name="tv_vip">会员专属</string>
+    <string name="pull_down_fresh">下拉刷新</string>
+    <string name="last_fresh">上次更新</string>
+    <string name="smooth_fresh">松开刷新</string>
+    <string name="freshing">刷新中...</string>
+    <string name="positive">确定</string>
+    <string name="negative">取消</string>
+    <string name="exit_monitor">是否退出程序?</string>
+    <string name="photo_f_camer">拍照</string>
+    <string name="photo_f_gallery">从图库中选择</string>
+    <string name="tpl_change_user_name_title">更改名字</string>
+    <string name="tpl_change_user_note_title">更改备注</string>
+    <string name="tpl_input_user_name_hint">好名字可以让你的朋友更容易记住你</string>
+    <string name="tpl_input_user_note_hint">自定义备注信息，给你带来更多吸引</string>
+    <string name="tpl_key_user_icon">头像</string>
+    <string name="tpl_key_user_name">昵称</string>
+    <string name="tpl_key_user_gender">性别</string>
+    <string name="tpl_key_user_note">备注</string>
+    <string name="tpl_value_user_name">昵称</string>
+    <string name="tpl_value_user_gender">性别</string>
+    <string name="tpl_value_user_note">请填写备注信息</string>
+    <string name="tpl_sign_user_info">用户信息</string>
+    <string name="tpl_sign_up">注册</string>
+    <string name="tpl_girl">女</string>
+    <string name="tpl_boy">男</string>
+    <string name="tpl_camera">拍照</string>
+    <string name="tpl_picture">从相册获取</string>
+      <string name="login_with_msg">用手机号码登录</string>
+    <string name="login_with_weixin">用微信登录</string>
+    <string name="login_with_sina_weibo">用新浪微博登录</string>
+    <string name="login_with_qzone">用QQ空间登录</string>
+    <string name="login_with_other_plat">其他帐号登录</string>
+    <string name="userid_found">用户信息已存在，正在跳转登录操作…</string>
+    <string name="logining">使用%s帐号登录中…</string>
+    <string name="auth_cancel">授权操作已取消</string>
+    <string name="auth_error">授权操作遇到错误，请阅读Logcat输出; \n 如微信登录，需要微信客户端</string>
+    <string name="auth_complete">授权成功，正在跳转登录操作…</string>
+        <string name="tpl_msg_login_hint">请输入手机号码</string>
+    <string name="tpl_verify_code_hint">请输验证码</string>
+    <string name="tpl_get_verify_code">获取验证码</string>
+    <string name="tpl_send_verify_code">检验验证码</string>
+    <string name="signup_success">注册成功</string>
+    <string name="signup_failed">注册失败</string>
+
+    <string-array name="date">
+        <item>Peter</item>
+        <item>Allen</item>
+        <item>阿妹</item>
+        <item>阿郎</item>
+        <item>陈奕迅</item>
+        <item>周杰伦</item>
+        <item>曾一鸣</item>
+        <item>成龙</item>
+        <item>王力宏</item>
+        <item>汪峰</item>
+        <item>王菲</item>
+        <item>那英</item>
+        <item>张伟</item>
+        <item>张学友</item>
+        <item>李德华</item>
+        <item>郑源</item>
+        <item>白水水</item>
+        <item>重庆</item>
+        <item>白天不亮</item>
+        <item>陈龙</item>
+        <item>陈丽丽</item>
+        <item>哈林</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>陶喆</item>
+        <item>沙宝亮</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>齐大友</item>
+        <item>齐天大圣</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>BOBO</item>
+        <item>Jobs</item>
+        <item>动力火车</item>
+        <item>伍佰</item>
+        <item>#蔡依林</item>
+        <item>$797835344$</item>
+        <item>Jack</item>
+        <item>~夏先生</item>
+    </string-array>
+
+</resources>

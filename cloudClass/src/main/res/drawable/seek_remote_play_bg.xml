@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- android:drawable="@drawable/mypro_normal" -->
+    <!-- <clip android:drawable="@drawable/mypro_select" /> -->
+    <!-- <clip android:drawable="@drawable/mypro_normal" /> -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="4dip" />
+
+            <gradient
+                android:angle="270"
+                android:centerColor="#77222222"
+                android:centerY="0.75"
+                android:endColor="#77222222"
+                android:startColor="#77222222" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="4dip" />
+
+                <gradient
+                    android:angle="270"
+                    android:centerColor="@color/main_theme"
+                    android:centerY="0.75"
+                    android:endColor="@color/main_theme"
+                    android:startColor="@color/main_theme" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

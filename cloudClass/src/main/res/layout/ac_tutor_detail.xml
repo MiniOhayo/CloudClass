@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_title"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="讲师详情"
+            android:textColor="@color/front_white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn"
+            android:src="@drawable/img_back" />
+    </RelativeLayout>
+
+    <com.cloudclass.view.MyScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/img_face"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:focusable="true" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/show_tutor_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/img_face"
+                    android:gravity="center_vertical"
+                    android:text="hhhh"
+                    android:textColor="@color/tutor_detail_title"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/show_tutor_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/show_tutor_title"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/img_face"
+                    android:gravity="center_vertical"
+                    android:text="hhhh"
+                    android:textColor="@color/tutor_detail_info"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lessonNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/show_tutor_title"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/tutor_detail_lesson_page"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="@color/main_divider" />
+
+            <TextView
+                android:id="@+id/detail_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="课程数课,程数课程数课程数课程数课,,,,程数"
+                android:textColor="@color/tutor_detail_info"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/detail_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="收起"
+                android:textColor="@color/tutor_detail_lesson_page"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/detail_info_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/pull_down"
+                android:gravity="center"
+                android:text="了解更多"
+                android:textColor="@color/tutor_detail_info"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="@color/main_divider" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="讲师课程"
+                android:textColor="@color/tutor_detail_title"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/lvLive"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/main_divider"
+                android:dividerHeight="1px"
+                android:listSelector="@drawable/item_s" />
+        </LinearLayout>
+    </com.cloudclass.view.MyScrollView>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="120dp"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_shape"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_shape" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/positiveButton"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@id/top"
+        android:layout_below="@id/top"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/alertdialog_btn1"
+        android:textColor="@color/gray" />
+
+    <Button
+        android:id="@+id/negativeButton"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:layout_alignRight="@id/top"
+        android:layout_below="@id/top"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/positiveButton"
+        android:background="@drawable/alertdialog_btn2"
+        android:textColor="@color/gray" />
+
+</RelativeLayout>
